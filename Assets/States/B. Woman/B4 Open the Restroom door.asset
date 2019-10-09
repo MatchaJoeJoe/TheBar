@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: B4 Open the Restroom door
+  m_EditorClassIdentifier: 
+  storyText: "You tentatively open the restroom door. You see the woman standing in
+    front of the sink. She's crying. You're not sure why, but it hurts to see another
+    person in pain. You want to try and make the situation better, but you're not
+    sure how.\r\n\r\nWhat do you do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: 192d8f1315a5a9c40adaa203a70e0037, type: 2}
+  - {fileID: 11400000, guid: d78e6a63945180045ad62a93f21b726e, type: 2}
+  nextStatesNames:
+  - Quietly close the door and go back
+  - Try to comfort her
+  backgroundImage: {fileID: 21300000, guid: b2ecaf1cb05209640b418cc93012f2ba, type: 3}

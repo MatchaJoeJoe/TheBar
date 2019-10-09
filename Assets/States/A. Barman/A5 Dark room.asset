@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: A5 Dark room
+  m_EditorClassIdentifier: 
+  storyText: "You wake up in a dark, stuffy room. Your head aches. You try to move
+    and realize that your chest, arms and legs are bound to a chair. You try to look
+    around, but there's a bag over your head. You try to call out, but you've been
+    gagged.\r\n\r\nWhat do you do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: 85e6f2ab0905f714892749311a9c8069, type: 2}
+  - {fileID: 11400000, guid: 800f90a225ad74c4595cf03cd75e2672, type: 2}
+  nextStatesNames:
+  - Sit there and cry
+  - Try to move the chair

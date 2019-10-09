@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: D7 Cut his throat
+  m_EditorClassIdentifier: 
+  storyText: "You slice his throat from ear to ear, watching the arterial spray splatter
+    his life blood over the wall. You watch as he twitches on the floor, clutching
+    vainly at his neck. As his final death throws cease, you drop the dagger and calmly
+    walk up the stairs.\r"
+  nextStates:
+  - {fileID: 11400000, guid: 3e243513d522c6a42aefb462d7bc9944, type: 2}
+  nextStatesNames:
+  - Walk upstairs
+  backgroundImage: {fileID: 0}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: D6 Hide under the stairs
+  m_EditorClassIdentifier: 
+  storyText: "You wait under the stairs, trying not to breathe, until you hear the
+    heavy footsteps of a large man making his way down the stairs.\r\n\r\n\"Where
+    did you go? A little game of hide and seek, huh?\"\r\n\r\nWhat do you do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: 6a440a184d7aeaa409828a3d8e5624bb, type: 2}
+  - {fileID: 11400000, guid: 8e4eea078a2c234459537a50acce22b3, type: 2}
+  nextStatesNames:
+  - Stab him in the back
+  - Cut his throat
