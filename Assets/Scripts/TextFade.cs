@@ -5,7 +5,7 @@ using TMPro;
 public class TextFade : MonoBehaviour
 {
     [SerializeField] private float FadeRate;
-    [SerializeField] private float targetAlpha; //serialized for debugging
+    private float targetAlpha;
     private TextMeshProUGUI tmpText;
     private bool isFading = false;
     // Use this for initialization
@@ -32,6 +32,8 @@ public class TextFade : MonoBehaviour
             tmpText.color = curTextColor;
         } else
         {
+            curTextColor.a = targetAlpha;
+            tmpText.color = curTextColor;
             isFading = false;
         }
     }

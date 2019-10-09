@@ -7,7 +7,7 @@ public class ButtonFade : MonoBehaviour
     [SerializeField] private float FadeRate;
     private Image[] images;
     private TextMeshProUGUI tmpText;
-    [SerializeField] private float targetAlpha; //serialized for debugging
+    private float targetAlpha; //serialized for debugging
     private bool isFading = false;
     // Use this for initialization
     void Start()
@@ -41,6 +41,12 @@ public class ButtonFade : MonoBehaviour
                 curColor.a = Mathf.Lerp(curColor.a, targetAlpha, FadeRate * Time.deltaTime);
                 image.color = curColor;
             }
+            else
+            {
+                curColor.a = targetAlpha;
+                image.color = curColor;
+
+            }
         }
         Color curTextColor = tmpText.color;
         float alphaDiffText = Mathf.Abs(curTextColor.a - targetAlpha);
@@ -48,6 +54,10 @@ public class ButtonFade : MonoBehaviour
         {
             thisFading = true;
             curTextColor.a = Mathf.Lerp(curTextColor.a, targetAlpha, FadeRate * Time.deltaTime);
+            tmpText.color = curTextColor;
+        } else
+        {
+            curTextColor.a = targetAlpha;
             tmpText.color = curTextColor;
         }
         if (thisFading)
@@ -63,7 +73,6 @@ public class ButtonFade : MonoBehaviour
     {
         return isFading;
     }
-
     public void FadeOut()
     {
         targetAlpha = 0.0f;

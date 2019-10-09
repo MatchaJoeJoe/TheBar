@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
   m_Name: A3 Whiskey no woman
   m_EditorClassIdentifier: 
-  storyText: "The barman smiles, reaches under the bar pulling out a whiskey tumbler
-    and fills it from the single tap at the end of the bar.\n\nWhile the barman is
-    preparing your drink, you notice the woman get up and walk towards a door in the
-    back of the room.\r"
+  storyText: The barman smiles, reaches under the bar pulling out a whiskey tumbler
+    and fills it from the single tap at the end of the bar.
   nextStates:
   - {fileID: 11400000, guid: f7fa4f9163db94f4e9f102109a3e3ab9, type: 2}
   nextStatesNames:

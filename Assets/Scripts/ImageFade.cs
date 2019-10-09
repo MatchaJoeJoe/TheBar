@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class ImageFade : MonoBehaviour
 {
-    public float FadeRate;
-    public bool isFading = false;
+    [SerializeField] private float FadeRate;
+    private bool isFading = false;
     private Image[] images;
-    [SerializeField] private float targetAlpha;
+    private float targetAlpha;
     void Start()
     {
         images = GetComponentsInChildren<Image>();
@@ -26,9 +26,14 @@ public class ImageFade : MonoBehaviour
             float alphaDiff = Mathf.Abs(curColor.a - targetAlpha);
             if (alphaDiff > 0.01f)
             {
-                thisFading = false;
+                thisFading = true;
                 curColor.a = Mathf.Lerp(curColor.a, targetAlpha, FadeRate * Time.deltaTime);
                 image.color = curColor;
+            } else
+            {
+                curColor.a = targetAlpha;
+                image.color = curColor;
+
             }
         }
         if (thisFading)
@@ -51,11 +56,11 @@ public class ImageFade : MonoBehaviour
     }
     public void FadeOut()
     {
-        this.targetAlpha = 0.0f;
+        targetAlpha = 0.0f;
     }
 
     public void FadeIn()
     {
-        this.targetAlpha = 1.0f;
+        targetAlpha = 1.0f;
     }
 }

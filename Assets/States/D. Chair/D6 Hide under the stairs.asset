@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: "You wait under the stairs, trying not to breathe, until you hear the
     heavy footsteps of a large man making his way down the stairs.\r\n\r\n\"Where
-    did you go? A little game of hide and seek, huh?\"\r\n\r\nWhat do you do?\r"
+    did you go? Don't make this harder than it has to be.\"\r\n\r\nWhat do you do?\r"
   nextStates:
   - {fileID: 11400000, guid: 6a440a184d7aeaa409828a3d8e5624bb, type: 2}
   - {fileID: 11400000, guid: 8e4eea078a2c234459537a50acce22b3, type: 2}
   nextStatesNames:
   - Stab him in the back
   - Cut his throat
+  backgroundImage: {fileID: 0}

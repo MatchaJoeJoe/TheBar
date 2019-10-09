@@ -2,6 +2,7 @@
 /obj/*
 /Build/*
 /Builds/*
+/Temp/*
 
 # Visual Studio cache directory
 .vs/

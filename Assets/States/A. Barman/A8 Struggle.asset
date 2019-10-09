@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: "You start pulling at your bindings, rocking the chair back and forth.
     The man looks at you sadly while he gently steadies the chair.\r\n\r\n\"Try not
-    to struggle, it will be over soon.\" He says with a sad smile.\r\n\r\nHe then
-    brings the dagger closer to your face.\r"
+    to struggle, it will be over soon,\" he says calmly.\r\n\r\nHe then brings the
+    dagger closer to your face.\r"
   nextStates:
   - {fileID: 11400000, guid: 350bb780cfa1de14ebc5d386d94b94d4, type: 2}
   nextStatesNames:

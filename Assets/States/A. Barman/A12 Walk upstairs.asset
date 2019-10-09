@@ -15,8 +15,7 @@ MonoBehaviour:
   storyText: "You cry out in suprise and ask her what is going on. You notice tears
     flowing freely down her face as she bends to take the knife from the man's still
     twitching hand. As she cuts your bindings, she says somberly, \"I couldn't watch
-    it happen again.\"\r She then walks back up the stairs out the door, into the
-    rain.\r"
+    it happen again.\" She then walks back up the stairs out the door, into the rain.\r"
   nextStates:
   - {fileID: 11400000, guid: 75e8df2dda9abe14282e8eeb7f8d2b56, type: 2}
   nextStatesNames:
