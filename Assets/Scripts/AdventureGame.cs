@@ -152,37 +152,46 @@ public class AdventureGame : MonoBehaviour
 
     IEnumerator AudioFadeRoutine(AudioClip nextClip, float[] clipFloats, bool clipLoop)
     {
+        bool isAudio1Playing = audioSource1.isPlaying;
         float clipVolume = clipFloats[0];
         float clipFadeTime = clipFloats[1];
         float clipDelay = clipFloats[2];
-        if (audioSource1.isPlaying)
+        if (isAudio1Playing)
         {
             audioFade1.FadeToVolume(0, clipFadeTime);
-        } else
+        }
+        else
         {
             audioFade2.FadeToVolume(0, clipFadeTime);
         }
         yield return new WaitForSeconds(clipDelay);
-        if (audioSource1.isPlaying)
+        if (isAudio1Playing)
         {
-            audioSource1.Stop();
             audioSource2.volume = 0;
             audioSource2.clip = nextClip;
             audioSource2.loop = clipLoop;
             audioSource2.Play();
             audioFade2.FadeToVolume(clipVolume, clipFadeTime);
-        } else
+        }
+        else
         {
-            audioSource2.Stop();
             audioSource1.volume = 0;
             audioSource1.clip = nextClip;
             audioSource1.loop = clipLoop;
             audioSource1.Play();
             audioFade1.FadeToVolume(clipVolume, clipFadeTime);
         }
-    }
+        yield return new WaitForSeconds(clipFadeTime);
+        if (isAudio1Playing)
+        {
+            audioSource1.Stop();
+        }
+        else
+        {
+            audioSource2.Stop();
+        }
 
-    IEnumerator ButtonsFadeIn()
+        IEnumerator ButtonsFadeIn()
     {
         yield return new WaitForSeconds(0.1f);
         while (textBGFade.CheckFading() || textFade.CheckFading() || buttonHolderFade.CheckFading())
