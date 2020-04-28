@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ImageFade : MonoBehaviour
 {
+    #pragma warning disable 0649
     [SerializeField] private float FadeRate;
     private bool isFading = false;
     private Image[] images;

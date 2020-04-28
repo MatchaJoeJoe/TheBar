@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: B3 Follow her
+  m_EditorClassIdentifier: 
+  storyText: "As you walk through the the door, you see two doors in a cramped hallway.
+    One has a sign with a toilet on it, the other has no sign. \r\n\r\nWhat do you
+    do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: eb973f07b24123b40aabc76dc8180fa3, type: 2}
+  - {fileID: 11400000, guid: 3fb131cb1ceb9fe4783953854a39173d, type: 2}
+  - {fileID: 11400000, guid: 61f47c801eee36f47a177443fdaf4472, type: 2}
+  nextStatesNames:
+  - Go back and talk to the barman
+  - Open the restroom door
+  - Open the door with no sign
+  backgroundImage: {fileID: 21300000, guid: 4b1eaf4c8f871c848937dd6bdf293612, type: 3}

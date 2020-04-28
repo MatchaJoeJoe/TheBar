@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: A10 A shot rings out
+  m_EditorClassIdentifier: 
+  storyText: "As the blade pierces your flesh, you hear the loud crack of a gun. The
+    man's face explodes outward and bits of bone and grey matter are splattered across
+    the wall and floor. As his body collapses, you see the woman from the bar at the
+    top of the stairs, holding a smoking gun, arms shaking, tears running down her
+    face.\r\n\r\nWhat do you do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: 1d8a16135cdb4a941ab9f8ac1287d672, type: 2}
+  - {fileID: 11400000, guid: 2948fbecc5183694bb410b7dc2d9eb50, type: 2}
+  nextStatesNames:
+  - Sit in stunned silence
+  - Ask what is going on
+  backgroundImage: {fileID: 0}

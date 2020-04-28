@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: D3 Search the room
+  m_EditorClassIdentifier: 
+  storyText: "You look around the room and all you can find is a wicked looking dagger,
+    bent and crooked.\r\n\r\nWhat do you do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: 64de16f0068304045a526bf19a01935d, type: 2}
+  - {fileID: 11400000, guid: 0cdc87badc2e72c42a1719fda5c9d27d, type: 2}
+  nextStatesNames:
+  - Take the dagger
+  - Run up the stairs

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: A2 Talk to the barman
+  m_EditorClassIdentifier: 
+  storyText: "You ask the barman for a drink. He says he only has beer or whiskey,
+    you're not sure where the woman got her fruity drink.\r\n\r\nWhat do you choose?\r\n"
+  nextStates:
+  - {fileID: 11400000, guid: 1be2fb310793b8f44b60ac4b03662c61, type: 2}
+  - {fileID: 11400000, guid: b8336a160897e1e4eb9968c46fb0964c, type: 2}
+  - {fileID: 11400000, guid: cbe9a18018e10744dbc966556a6b7b64, type: 2}
+  nextStatesNames:
+  - Ask for a beer
+  - Ask for a whiskey
+  - Ask about the fruity drink
+  backgroundImage: {fileID: 0}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
+  m_Name: A6 Sit there and cry
+  m_EditorClassIdentifier: 
+  storyText: "You start sobbing. You cry until snot and spit start running down your
+    chin into your shirt. You cry until you can't cry anymore.\r\n\nHours pass. You
+    are getting hungry. You need to use the bathroom. You try to hold it for as long
+    as you can, but you soil yourself. You're scared and alone in a dark room. You
+    can't see, can't move, can't call out. You're trapped.\r\n\nWhat do you do?\r"
+  nextStates:
+  - {fileID: 11400000, guid: 25bc1548cd0f3c84897e8baf6d019e41, type: 2}
+  - {fileID: 11400000, guid: 800f90a225ad74c4595cf03cd75e2672, type: 2}
+  nextStatesNames:
+  - Wait for the inevitable
+  - Try to move the chair

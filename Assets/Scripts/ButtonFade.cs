@@ -4,6 +4,7 @@ using TMPro;
 
 public class ButtonFade : MonoBehaviour
 {
+    #pragma warning disable 0649
     [SerializeField] private float FadeRate;
     private Image[] images;
     private TextMeshProUGUI tmpText;
