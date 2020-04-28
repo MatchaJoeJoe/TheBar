@@ -21,3 +21,5 @@ MonoBehaviour:
   nextStatesNames:
   - Walk down the stairs
   - Get out of here, fast!
+  backgroundImage: {fileID: 21300000, guid: dd5d6d0e1bf00f14dace790266d12060, type: 3}
+  activatedTag: 

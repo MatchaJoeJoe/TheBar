@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 [CreateAssetMenu(menuName = "State")]
 public class State : ScriptableObject
 {
@@ -8,6 +9,7 @@ public class State : ScriptableObject
     [SerializeField] State[] nextStates;
     [SerializeField] string[] nextStatesNames;
     [SerializeField] Sprite backgroundImage;
+    [SerializeField] string activatedTag;
 
     public string GetStateStory()
     {
@@ -25,5 +27,9 @@ public class State : ScriptableObject
     public Sprite GetBackgroundImage()
     {
         return backgroundImage;
+    }
+    public string GetActivatedTag()
+    {
+        return activatedTag;
     }
 }

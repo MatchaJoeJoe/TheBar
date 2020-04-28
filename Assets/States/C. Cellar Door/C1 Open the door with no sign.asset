@@ -20,3 +20,5 @@ MonoBehaviour:
   nextStatesNames:
   - Open the restroom door
   - Pick the lock
+  backgroundImage: {fileID: 0}
+  activatedTag: 

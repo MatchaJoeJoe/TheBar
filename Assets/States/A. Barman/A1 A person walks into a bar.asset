@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: A1 A person walks into a bar
   m_EditorClassIdentifier: 
   storyText: "You step through the door, soaked to the bone and dripping, and find
-    a simple bar, a little bare, but cozy. There is a barman standing behind the bar,
-    cleaning a glass with a towel, and a woman sitting at the bar, sipping a fruity
-    looking drink.\r\n\r\nWhat do you do?\r"
+    a simple bar, a little bare, but cozy. The smell of stale beer and dust fills
+    your nose, seems like this bar has been here a while. There is a barman standing
+    behind the bar, cleaning a glass with a towel, and a woman sitting at the bar,
+    sipping a fruity looking drink.\r\n\r\nWhat do you do?\r"
   nextStates:
   - {fileID: 11400000, guid: 9ffc0c0f2525a2f4b9fe758e961fc5e0, type: 2}
   - {fileID: 11400000, guid: 2449355acf372f346a9591a5da9066a4, type: 2}
@@ -23,3 +24,4 @@ MonoBehaviour:
   - Talk to the barman
   - Talk to the woman
   backgroundImage: {fileID: 21300000, guid: 1ac9f7a6e3e03104eb7cc56268276645, type: 3}
+  activatedTag: Back Rain

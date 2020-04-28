@@ -22,3 +22,5 @@ MonoBehaviour:
   nextStatesNames:
   - Turn on the light
   - Walk down the stairs
+  backgroundImage: {fileID: 21300000, guid: 7682587447c7abf48b2f0ca6f60d5462, type: 3}
+  activatedTag: Cellar Light Off

@@ -15,24 +15,34 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] private GameObject theButtonPrefab;
     [SerializeField] private GameObject theBGImage1;
     [SerializeField] private GameObject theBGImage2;
-    [SerializeField] private GameObject rainImage;
     [SerializeField] private float startDelay;
     private Image theBGImage1image;
     private Image theBGImage2image;
     private ImageFade theBGImage2imageFade;
     private AdventureGame theGame;
     private ImageFade buttonHolderFade;
+    [Header("Debug")]
+    [SerializeField] private GameObject[] activatableObjs;
     [SerializeField] private State currentState; //serialized for debugging
 
     // Start is called before the first frame update
     void Start()
     {
+        GetActivatableObjs();
         theGame = FindObjectOfType<AdventureGame>();
         theBGImage1image = theBGImage1.GetComponent<Image>();
         theBGImage2image = theBGImage2.GetComponent<Image>();
         theBGImage2imageFade = theBGImage2.GetComponent<ImageFade>();
         buttonHolderFade = buttonHolder.GetComponent<ImageFade>();
         NextState(startingState);
+    }
+    private void GetActivatableObjs()
+    {
+        activatableObjs = GameObject.FindGameObjectsWithTag("Toggleable");
+        foreach (GameObject activatableObj in activatableObjs)
+        {
+            activatableObj.SetActive(false);
+        }
     }
     public void NextState(State nextState)
     {
@@ -45,11 +55,20 @@ public class AdventureGame : MonoBehaviour
     }
     IEnumerator TextFade(State nextState)
     {
+        // Toggling objects from state
+        if (currentState != null)
+        {
+            string thisTag = currentState.GetActivatedTag();
+            ToggleObjByName(thisTag);
+        }
+        string nextTag = nextState.GetActivatedTag();
+        ToggleObjByName(nextTag);
         // Updating state
         currentState = nextState;
         textBGFade.FadeOut();
         textFade.FadeOut();
         buttonHolderFade.FadeOut();
+
         // Updating background
         Sprite nextSprite = nextState.GetBackgroundImage();
         if (nextSprite != null)
@@ -118,15 +137,6 @@ public class AdventureGame : MonoBehaviour
     }
     private void BackgroundFade(Sprite newSprite)
     {
-        // moving rain to background if not the starting state
-        if (GetCurrentStateName() == startingState.name)
-        {
-            rainImage.transform.SetAsLastSibling();
-        }
-        else
-        {
-            rainImage.transform.SetAsFirstSibling();
-        }
         // checking which image to set new sprite on cross fade
         if (theBGImage2imageFade.GetTargetAlpha() == 0)
         {
@@ -139,6 +149,16 @@ public class AdventureGame : MonoBehaviour
         }
     }
 
+    private void ToggleObjByName(string objName)
+    {
+        foreach (GameObject activatedObj in activatableObjs)
+        {
+            if (activatedObj.name == objName)
+            {
+                activatedObj.gameObject.SetActive(!activatedObj.gameObject.activeSelf);
+            }
+        }
+    }
     public string GetCurrentStateName()
     {
         return currentState.name;
