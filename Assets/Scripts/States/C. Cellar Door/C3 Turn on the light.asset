@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: "You pull the string and the light stutters to life. You see a wooden
     chair with some rope next to it and a small table with a wicked looking knife,
-    bent and crooked.\r\n\r\nWhat do you do?\r"
+    bent and wrong.\r\n\r\nWhat do you do?\r"
   nextStates:
   - {fileID: 11400000, guid: 95dfdda4ffc1eb34f885f9846dbcfe91, type: 2}
   - {fileID: 11400000, guid: 5a8efdc8a29416a4081cf428f42f7dc7, type: 2}
@@ -22,4 +22,9 @@ MonoBehaviour:
   - Walk down the stairs
   - Get out of here, fast!
   backgroundImage: {fileID: 21300000, guid: dd5d6d0e1bf00f14dace790266d12060, type: 3}
-  activatedTag: 
+  activatedTag: Cellar Light On
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1
+  waterDripOn: 1

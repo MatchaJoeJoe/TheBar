@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0287f4150d89f4fb9e575d02c55a41, type: 3}
   m_Name: A5 Dark room
   m_EditorClassIdentifier: 
-  storyText: "You wake up in a dark, stuffy room. Your head aches. You try to move
+  storyText: "You wake up in a damp, stuffy room. Your head aches. You try to move
     and realize that your chest, arms and legs are bound to a chair. You try to look
     around, but there's a bag over your head. You try to call out, but you've been
     gagged.\r\n\r\nWhat do you do?\r"
@@ -22,3 +22,11 @@ MonoBehaviour:
   nextStatesNames:
   - Sit there and cry
   - Try to move the chair
+  backgroundImage: {fileID: 0}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 0
+  musicMuffled: 0
+  waterDripOn: 1
+  heartBeatOn: 1

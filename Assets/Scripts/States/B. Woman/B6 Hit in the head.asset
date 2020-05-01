@@ -21,3 +21,10 @@ MonoBehaviour:
   nextStatesNames:
   - Continue
   backgroundImage: {fileID: 21300000, guid: 6fec10a245a71424181ce3ed72c877e3, type: 3}
+  activatedTag: ClubbedAudio
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 0
+  musicMuffled: 0
+  waterDripOn: 0
+  heartBeatOn: 1

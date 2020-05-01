@@ -19,3 +19,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f39dbe7c1d0aeda408f9f44699e8806f, type: 2}
   nextStatesNames:
   - Continue
+  backgroundImage: {fileID: 0}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1
+  waterDripOn: 1

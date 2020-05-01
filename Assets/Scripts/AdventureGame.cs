@@ -4,6 +4,8 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.Assertions.Must;
+using UnityEngine.Audio;
 
 public class AdventureGame : MonoBehaviour
 {
@@ -17,8 +19,14 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] private GameObject theBGImage1;
     [SerializeField] private GameObject theBGImage2;
     [Header("Audio")]
-    [SerializeField] private GameObject audioObj1;
-    [SerializeField] private GameObject audioObj2;
+    [SerializeField] private AudioMixer masterMixer;
+    [SerializeField] private GameObject rainAudio;
+    [SerializeField] private GameObject musicAudio;
+    [SerializeField] private AudioSource waterDripSource;
+    [SerializeField] private AudioSource heartBeatSource;
+    [SerializeField] private Image audioController;
+    [SerializeField] private Sprite audioOn;
+    [SerializeField] private Sprite audioOff;
     [Header("Misc")]
     [SerializeField] private State startingState;
     [SerializeField] private float startDelay;
@@ -27,10 +35,12 @@ public class AdventureGame : MonoBehaviour
     private ImageFade theBGImage2imageFade;
     private AdventureGame theGame;
     private ImageFade buttonHolderFade;
-    private AudioSource audioSource1;
-    private AudioSource audioSource2;
-    private AudioFade audioFade1;
-    private AudioFade audioFade2;
+    private AudioSource rainSource;
+    private AudioSource musicSource;
+    private AudioLowPassFilter rainFilter;
+    private AudioLowPassFilter musicFilter;
+    private float masterVolume;
+    private bool isMuted = false;
     [Header("Debug")]
     [SerializeField] private GameObject[] activatableObjs;
     [SerializeField] private State currentState; //serialized for debugging
@@ -46,10 +56,11 @@ public class AdventureGame : MonoBehaviour
         theBGImage2image = theBGImage2.GetComponent<Image>();
         theBGImage2imageFade = theBGImage2.GetComponent<ImageFade>();
         buttonHolderFade = buttonHolder.GetComponent<ImageFade>();
-        audioSource1 = audioObj1.GetComponent<AudioSource>();
-        audioSource2 = audioObj2.GetComponent<AudioSource>();
-        audioFade1 = audioObj1.GetComponent<AudioFade>();
-        audioFade2 = audioObj2.GetComponent<AudioFade>();
+        rainSource = rainAudio.GetComponent<AudioSource>();
+        musicSource = musicAudio.GetComponent<AudioSource>();
+        rainFilter = rainAudio.GetComponent<AudioLowPassFilter>();
+        musicFilter = musicAudio.GetComponent<AudioLowPassFilter>();
+        masterMixer.GetFloat("masterVolume", out masterVolume);
         // Transitioning to starting state
         NextState(startingState);
     }
@@ -90,16 +101,20 @@ public class AdventureGame : MonoBehaviour
         buttonHolderFade.FadeOut();
 
         // Transition Audio
-        AudioClip nextClip = nextState.GetAudioClip();
-        if (nextClip != null)
-        {
-            AudioFade(nextClip, nextState.GetClipFloats(), nextState.GetClipLoop());
-            yield return new WaitForSeconds(0.1f);
-            while (theBGImage2imageFade.CheckFading())
-            {
-                yield return new WaitForSeconds(0.1f);
-            }
-        }
+        bool[] clipBools = nextState.GetClipBools();
+        bool rainOn = clipBools[0];
+        bool rainMuffled = clipBools[1];
+        bool musicOn = clipBools[2];
+        bool musicMuffled = clipBools[3];
+        bool waterDripOn = clipBools[4];
+        bool heartBeatOn = clipBools[5];
+        rainFilter.enabled = rainMuffled;
+        rainSource.mute = !rainOn;
+        rainFilter.enabled = rainMuffled;
+        musicSource.mute = !musicOn;
+        musicFilter.enabled = musicMuffled;
+        waterDripSource.mute = !waterDripOn;
+        heartBeatSource.mute = !heartBeatOn;
 
         // Updating background image
         Sprite nextSprite = nextState.GetBackgroundImage();
@@ -144,53 +159,6 @@ public class AdventureGame : MonoBehaviour
         textFade.FadeIn();
         buttonHolderFade.FadeIn();
     }
-
-    private void AudioFade(AudioClip nextClip, float[] clipData, bool clipLoop)
-    {
-        StartCoroutine(AudioFadeRoutine(nextClip, clipData, clipLoop));
-    }
-
-    IEnumerator AudioFadeRoutine(AudioClip nextClip, float[] clipFloats, bool clipLoop)
-    {
-        bool isAudio1Playing = audioSource1.isPlaying;
-        float clipVolume = clipFloats[0];
-        float clipFadeTime = clipFloats[1];
-        float clipDelay = clipFloats[2];
-        if (isAudio1Playing)
-        {
-            audioFade1.FadeToVolume(0, clipFadeTime);
-        }
-        else
-        {
-            audioFade2.FadeToVolume(0, clipFadeTime);
-        }
-        yield return new WaitForSeconds(clipDelay);
-        if (isAudio1Playing)
-        {
-            audioSource2.volume = 0;
-            audioSource2.clip = nextClip;
-            audioSource2.loop = clipLoop;
-            audioSource2.Play();
-            audioFade2.FadeToVolume(clipVolume, clipFadeTime);
-        }
-        else
-        {
-            audioSource1.volume = 0;
-            audioSource1.clip = nextClip;
-            audioSource1.loop = clipLoop;
-            audioSource1.Play();
-            audioFade1.FadeToVolume(clipVolume, clipFadeTime);
-        }
-        yield return new WaitForSeconds(clipFadeTime);
-        if (isAudio1Playing)
-        {
-            audioSource1.Stop();
-        }
-        else
-        {
-            audioSource2.Stop();
-        }
-
         IEnumerator ButtonsFadeIn()
     {
         yield return new WaitForSeconds(0.1f);
@@ -241,5 +209,19 @@ public class AdventureGame : MonoBehaviour
     public string GetCurrentStateName()
     {
         return currentState.name;
+    }
+    public void ToggleAudio()
+    {
+        if (isMuted)
+        {
+            audioController.sprite = audioOn;
+            masterMixer.SetFloat("masterVolume", masterVolume);
+            isMuted = false;
+        } else
+        {
+            audioController.sprite = audioOff;
+            masterMixer.SetFloat("masterVolume", -80f);
+            isMuted = true;
+        }
     }
 }

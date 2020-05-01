@@ -20,3 +20,9 @@ MonoBehaviour:
   nextStatesNames:
   - Continue
   backgroundImage: {fileID: 0}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1
+  waterDripOn: 1

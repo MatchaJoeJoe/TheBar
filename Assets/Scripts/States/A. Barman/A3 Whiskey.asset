@@ -13,11 +13,18 @@ MonoBehaviour:
   m_Name: A3 Whiskey
   m_EditorClassIdentifier: 
   storyText: "The barman smiles, reaches under the bar pulling out a whiskey tumbler
-    and fills it from the single tap at the end of the bar.\n\nWhile the barman is
-    preparing your drink, you notice the woman get up and walk towards a door in the
-    back of the room.\r"
+    and fills it from the single bottle at the end of the bar and goes back to cleaning
+    glasses with a nod.\n\nWhile the barman is preparing your drink, you notice the
+    woman get up and walk towards a door in the back of the room.\r"
   nextStates:
   - {fileID: 11400000, guid: f7fa4f9163db94f4e9f102109a3e3ab9, type: 2}
+  - {fileID: 11400000, guid: a5145c8338af4f94b99dba913c083ec3, type: 2}
   nextStatesNames:
-  - Continue
+  - Take your drink
+  - Follow the woman
   backgroundImage: {fileID: 21300000, guid: 01a8e25834a031b4d9d9167597173ca8, type: 3}
+  activatedTag: 
+  rainOn: 1
+  rainMuffled: 1
+  musicOn: 1
+  musicMuffled: 0

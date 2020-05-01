@@ -21,3 +21,8 @@ MonoBehaviour:
   nextStatesNames:
   - Continue
   backgroundImage: {fileID: 21300000, guid: b2ecaf1cb05209640b418cc93012f2ba, type: 3}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1

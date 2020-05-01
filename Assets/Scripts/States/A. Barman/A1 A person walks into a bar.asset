@@ -24,9 +24,8 @@ MonoBehaviour:
   - Talk to the barman
   - Talk to the woman
   backgroundImage: {fileID: 21300000, guid: 1ac9f7a6e3e03104eb7cc56268276645, type: 3}
-  activatedTag: Back Rain
-  theClip: {fileID: 8300000, guid: c0518b1d2760f7e4b8b4b32b2337a135, type: 3}
-  clipVolume: 0.5
-  clipFadeTime: 1
-  clipDelay: 0
-  clipLoop: 1
+  activatedTag: 
+  rainOn: 1
+  rainMuffled: 1
+  musicOn: 1
+  musicMuffled: 0

@@ -23,3 +23,11 @@ MonoBehaviour:
   nextStatesNames:
   - Wait for the inevitable
   - Try to move the chair
+  backgroundImage: {fileID: 0}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 0
+  musicMuffled: 0
+  waterDripOn: 1
+  heartBeatOn: 1

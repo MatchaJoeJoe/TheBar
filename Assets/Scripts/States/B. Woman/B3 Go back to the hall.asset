@@ -16,9 +16,16 @@ MonoBehaviour:
     notice you. You're not sure what's going on, but better to leave her be. \n\r\nWhat
     do you do?\r"
   nextStates:
-  - {fileID: 11400000, guid: eb973f07b24123b40aabc76dc8180fa3, type: 2}
+  - {fileID: 11400000, guid: e6b71d64c42fa59469b79e47aa79d1f7, type: 2}
   - {fileID: 11400000, guid: 61f47c801eee36f47a177443fdaf4472, type: 2}
   nextStatesNames:
   - Go back and talk to the barman
   - Open the door with no sign
   backgroundImage: {fileID: 21300000, guid: 4b1eaf4c8f871c848937dd6bdf293612, type: 3}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1
+  waterDripOn: 0
+  heartBeatOn: 0

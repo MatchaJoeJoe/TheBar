@@ -21,3 +21,10 @@ MonoBehaviour:
   nextStatesNames:
   - Try to talk to him
   - Barrel past him
+  backgroundImage: {fileID: 0}
+  activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1
+  waterDripOn: 1

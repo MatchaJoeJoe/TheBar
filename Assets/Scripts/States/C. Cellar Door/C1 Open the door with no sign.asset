@@ -17,8 +17,16 @@ MonoBehaviour:
   nextStates:
   - {fileID: 11400000, guid: 3fb131cb1ceb9fe4783953854a39173d, type: 2}
   - {fileID: 11400000, guid: b27852a8b582ae94682864f02e645591, type: 2}
+  - {fileID: 11400000, guid: eb973f07b24123b40aabc76dc8180fa3, type: 2}
   nextStatesNames:
   - Open the restroom door
   - Pick the lock
+  - Go back and talk to the barman
   backgroundImage: {fileID: 0}
   activatedTag: 
+  rainOn: 0
+  rainMuffled: 0
+  musicOn: 1
+  musicMuffled: 1
+  waterDripOn: 0
+  heartBeatOn: 0

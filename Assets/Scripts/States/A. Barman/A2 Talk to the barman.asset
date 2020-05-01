@@ -23,3 +23,8 @@ MonoBehaviour:
   - Ask for a whiskey
   - Ask about the fruity drink
   backgroundImage: {fileID: 0}
+  activatedTag: 
+  rainOn: 1
+  rainMuffled: 1
+  musicOn: 1
+  musicMuffled: 0

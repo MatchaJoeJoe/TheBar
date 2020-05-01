@@ -11,12 +11,12 @@ public class State : ScriptableObject
     [SerializeField] string[] nextStatesNames;
     [SerializeField] Sprite backgroundImage;
     [SerializeField] string activatedTag;
-    [SerializeField] AudioClip theClip;
-    [SerializeField] float clipVolume;
-    [SerializeField] float clipFadeTime;
-    [SerializeField] float clipDelay;
-    [SerializeField] bool clipLoop;
-    private float[] clipFloats;
+    [SerializeField] bool rainOn;
+    [SerializeField] bool rainMuffled;
+    [SerializeField] bool musicOn;
+    [SerializeField] bool musicMuffled;
+    [SerializeField] bool waterDripOn;
+    [SerializeField] bool heartBeatOn;
 
     public string GetStateStory()
     {
@@ -39,20 +39,15 @@ public class State : ScriptableObject
     {
         return activatedTag;
     }
-    public AudioClip GetAudioClip()
+    public bool[] GetClipBools()
     {
-        return theClip;
-    }
-    public float[] GetClipFloats()
-    {
-        clipFloats = new float[3];
-        clipFloats[0] = clipVolume;
-        clipFloats[1] = clipFadeTime;
-        clipFloats[2] = clipDelay;
-        return clipFloats;
-    }
-    public bool GetClipLoop()
-    {
-        return clipLoop;
+        bool[] clipBools = new bool[6];
+        clipBools[0] = rainOn;
+        clipBools[1] = rainMuffled;
+        clipBools[2] = musicOn;
+        clipBools[3] = musicMuffled;
+        clipBools[4] = waterDripOn;
+        clipBools[5] = heartBeatOn;
+        return clipBools;
     }
 }

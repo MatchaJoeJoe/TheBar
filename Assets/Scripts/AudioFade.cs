@@ -24,13 +24,13 @@ public class AudioFade : MonoBehaviour
             currentVolume = theAudioSource.volume;
             if (Mathf.Abs(currentVolume - targetVolume) < .01)
             {
-                currentVolume = targetVolume;
+                theAudioSource.volume = targetVolume;
             }
         }
     }
     public void FadeToVolume(float newVolume, float seconds)
     {
         targetVolume = newVolume;
-        lerpAmount = seconds * Time.deltaTime;
+        lerpAmount = Time.deltaTime / seconds;
     }
 }
