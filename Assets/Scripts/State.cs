@@ -10,7 +10,7 @@ public class State : ScriptableObject
     [SerializeField] State[] nextStates;
     [SerializeField] string[] nextStatesNames;
     [SerializeField] Sprite backgroundImage;
-    [SerializeField] string activatedTag;
+    [SerializeField] string[] activatedTags;
     [SerializeField] bool rainOn;
     [SerializeField] bool rainMuffled;
     [SerializeField] bool musicOn;
@@ -35,9 +35,9 @@ public class State : ScriptableObject
     {
         return backgroundImage;
     }
-    public string GetActivatedTag()
+    public string[] GetActivatedTags()
     {
-        return activatedTag;
+        return activatedTags;
     }
     public bool[] GetClipBools()
     {

@@ -86,11 +86,17 @@ public class AdventureGame : MonoBehaviour
         // Toggling activated objects from states
         if (currentState != null)
         {
-            string thisTag = currentState.GetActivatedTag();
-            ToggleObjByName(thisTag);
+            string[] theTags = currentState.GetActivatedTags();
+            foreach(string thisTag in theTags)
+            {
+                ToggleObjByName(thisTag);
+            }
         }
-        string nextTag = nextState.GetActivatedTag();
-        ToggleObjByName(nextTag);
+        string[] nextTags = nextState.GetActivatedTags();
+        foreach (string nextTag in nextTags)
+        {
+            ToggleObjByName(nextTag);
+        }
 
         // Updating state 
         currentState = nextState;

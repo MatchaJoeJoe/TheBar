@@ -22,9 +22,12 @@ MonoBehaviour:
   - Walk down the stairs
   - Get out of here, fast!
   backgroundImage: {fileID: 21300000, guid: dd5d6d0e1bf00f14dace790266d12060, type: 3}
-  activatedTag: Cellar Light On
+  activatedTags:
+  - Cellar Light On
+  - WaterDrip
   rainOn: 0
   rainMuffled: 0
   musicOn: 1
   musicMuffled: 1
   waterDripOn: 1
+  heartBeatOn: 0

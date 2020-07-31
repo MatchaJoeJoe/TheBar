@@ -19,10 +19,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 565e40fff75f1284da56407fc3085cc1, type: 2}
   nextStatesNames:
   - Continue
-  backgroundImage: {fileID: 0}
-  activatedTag: 
+  backgroundImage: {fileID: 21300000, guid: 6fec10a245a71424181ce3ed72c877e3, type: 3}
+  activatedTag: ClubbedAudio
   rainOn: 0
   rainMuffled: 0
-  musicOn: 1
-  musicMuffled: 1
+  musicOn: 0
+  musicMuffled: 0
   waterDripOn: 1
+  heartBeatOn: 1
